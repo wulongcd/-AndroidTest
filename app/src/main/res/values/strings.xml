@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MyApp_T</string>
+    <string name="phone_is_null">phone_is_null</string>
+    <string name="pwd_is_null">pwd_is_null</string>
+    <string name="phone_is_valid">phone_is_valid</string>
+    <string name="pwd_is_valid">pwd_is_valid</string>
+</resources>
