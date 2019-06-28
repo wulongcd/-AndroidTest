@@ -37,12 +37,12 @@ public class LoginPresenter extends MvpPresenter implements LoginContract.Presen
 
     @Override
     public void getSms(String phone) {
-        Disposable disposable = Observable.interval(0, TimeUnit.MILLISECONDS, AndroidSchedulers.mainThread())
+        Disposable disposable = Observable.interval(1, TimeUnit.SECONDS, AndroidSchedulers.mainThread())
                 .take(120)
                 .subscribeWith(new DisposableObserver<Long>() {
                     @Override
                     public void onNext(Long aLong) {
-                        view.setCountDownText(String.valueOf(aLong));
+                        view.setCountDownText(String.valueOf(Math.abs(aLong - 120)));
                     }
 
                     @Override
@@ -52,7 +52,7 @@ public class LoginPresenter extends MvpPresenter implements LoginContract.Presen
 
                     @Override
                     public void onComplete() {
-                        view.setCountDownText("获取code");
+                        view.countDownComplete();
                     }
                 });
         compositeDisposable.add(disposable);
