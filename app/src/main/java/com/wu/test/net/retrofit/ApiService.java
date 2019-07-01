@@ -1,4 +1,4 @@
-package com.wu.test.net;
+package com.wu.test.net.retrofit;
 
 import com.wu.test.entity.DesignRes;
 import com.wu.test.entity.FeedBack;

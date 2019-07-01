@@ -1,4 +1,4 @@
-package com.wu.test.net;
+package com.wu.test.net.retrofit;
 
 public interface Constants {
 

@@ -2,7 +2,7 @@ package com.wu.test.base;
 
 
 import com.wu.test.entity.response.Response;
-import com.wu.test.net.Constants;
+import com.wu.test.net.retrofit.Constants;
 
 import io.reactivex.subscribers.ResourceSubscriber;
 import retrofit2.HttpException;

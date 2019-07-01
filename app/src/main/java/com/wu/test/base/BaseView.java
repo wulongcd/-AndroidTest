@@ -10,6 +10,8 @@ public interface BaseView<T> {
      */
     void showMsg(String msg);
 
+    void hideLoadingView();
+
     void setPresenter(T presenter);
 
     boolean isActive();

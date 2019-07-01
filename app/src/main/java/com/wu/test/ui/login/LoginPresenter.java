@@ -3,8 +3,7 @@ package com.wu.test.ui.login;
 import com.wu.test.base.CommonSubscriber;
 import  com.wu.test.base.MvpPresenter;
 import com.wu.test.entity.User;
-import com.wu.test.entity.response.Response;
-import com.wu.test.net.ApiService;
+import com.wu.test.net.retrofit.ApiService;
 import com.wu.test.ui.contract.LoginContract;
 
 import java.util.concurrent.TimeUnit;
@@ -15,10 +14,8 @@ import io.reactivex.Observable;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.disposables.Disposable;
-import io.reactivex.functions.Consumer;
 import io.reactivex.observers.DisposableObserver;
 import io.reactivex.schedulers.Schedulers;
-import io.reactivex.subscribers.ResourceSubscriber;
 
 public class LoginPresenter extends MvpPresenter implements LoginContract.Presenter {
 

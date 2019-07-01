@@ -1,5 +1,8 @@
 package com.wu.test.net;
 
+import com.wu.test.net.converter.CustomerGsonConverterFactory;
+import com.wu.test.net.retrofit.ApiService;
+
 import java.io.IOException;
 
 import javax.inject.Singleton;
@@ -18,8 +21,10 @@ import retrofit2.converter.gson.GsonConverterFactory;
 @Module
 public class ApiModule {
 
-    // LeanCloud
-    public static final String HOST = "https://api.leancloud.cn";
+    /**
+     * base url
+     */
+    private static final String HOST = "https://api.leancloud.cn";
 
     @Singleton
     @Provides
@@ -27,7 +32,7 @@ public class ApiModule {
         // Retrofit
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(HOST)
-                .addConverterFactory(GsonConverterFactory.create()) // gson
+                .addConverterFactory(CustomerGsonConverterFactory.create()) // gson
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create()) // rxjava
                 .client(httpClient)
                 .build();

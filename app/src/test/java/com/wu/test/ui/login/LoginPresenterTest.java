@@ -1,7 +1,7 @@
 package com.wu.test.ui.login;
 
 import com.wu.test.RxJavaTestSchedulerRule;
-import com.wu.test.net.ApiService;
+import com.wu.test.net.retrofit.ApiService;
 import com.wu.test.ui.contract.LoginContract;
 
 import org.junit.Before;
